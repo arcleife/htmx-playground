@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    ports:
+      - "4040:80"
+    volumes:
+      - ./app:/usr/share/nginx/html
+
+  todo-app:
+    build: services/todo
+    tty: true
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./services/todo:/app

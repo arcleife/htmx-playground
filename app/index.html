@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="utf-8">
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+            <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+            <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
+            
+            <title>Example</title>
+        </head>
+    </head>
+    <body>
+        <div class="w-1/2 mx-auto px-6 overflow-y-scroll">
+            <h1 class="text-grey-400 text-center font-bold">Todo List</h1>
+            <div hx-get="/todo" hx-trigger="load" hx-target="this" hx-swap="innerHTML"></div>
+        </div>
+    </body>
+</html>
