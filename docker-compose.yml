@@ -1,10 +1,11 @@
 services:
-  web:
+  nginx:
     build: .
     ports:
-      - "4040:80"
+      - "80:80"
     volumes:
       - ./app:/usr/share/nginx/html
+    restart: always
 
   todo-app:
     build: services/todo
